@@ -5,8 +5,12 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title send
+        link(rel="stylesheet", href="https://unpkg.com/mvp.css")
     body 
-        form(action="/send", method="post", enctype="multipart/form-data")
-            input(type="text", name="nickname", id="nickname", placeholder="nickname")
-            input(type="text", name="phone_number", id="nickname", placeholder="phone_number") 
-            button Send
+        header 
+            h1 Send_Message
+        main 
+            form(action="/send/data", method="post", enctype="multipart-form-data")
+                input(type="text", name="text", id="text", placeholder="text")
+                input(type="text", name="num", id="nickname", placeholder="phone_number") 
+                button Send
